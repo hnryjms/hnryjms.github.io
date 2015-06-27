@@ -1,0 +1,24 @@
+# Site settings
+title: Hank Brekke
+email: brekkehj@z43studio.com
+description: >
+  Developing a smarter world.
+
+  A showcase of work by Hank Brekke, software developer at Code42.
+baseurl: ""
+url: "https://hnryjms.github.io"
+permalink: /:year/:month/:title/
+twitter_username: hnryjms
+github_username:  hnryjms
+timezone: America/Chicago
+
+# Build settings
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [
+    'fenced_code_blocks',
+    'autolink',
+    'no_intra_emphasis',
+    'strikethrough'
+  ]

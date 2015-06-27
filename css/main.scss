@@ -1,0 +1,15 @@
+---
+# Showcase website styles for Hank Brekke
+---
+/*
+ * main.scss
+ *
+ * Copyright (c) 2015 by Hank Brekke. All rights reserved.
+ */
+
+@charset "utf-8";
+
+// Import partials from `/_sass` (configurable as `sass_dir` in _config.yml)
+@import "base";
+@import "layout";
+@import "syntax-highlighting";
