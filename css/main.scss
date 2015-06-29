@@ -9,8 +9,75 @@
 
 @charset "utf-8";
 
-// Import partials from `/_sass` (configurable as `sass_dir` in _config.yml)
-@import "base";
-@import "layout";
-@import "syntax-highlighting";
-@import "../css/fonts";
+@import "_sass/base";
+@import "_sass/layout";
+@import "_sass/syntax-highlighting";
+
+.site-header {
+	@include gridle_container();
+
+	padding: 22px 0;
+
+	.brand {
+		@include gridle(4);
+		@include gridle(12, sm);
+
+		@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+			text-align: center;
+		}
+
+		h1 {
+			a {
+				border: none;
+				color: #000;
+				transition: color 160ms;
+
+				&:hover {
+					color: #3064E2;
+				}
+			}
+		}
+	}
+	.navigation {
+		@include gridle(8);
+		@include gridle(12, sm);
+
+		text-align: right;
+		@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+			text-align: center;
+		}
+
+		ul {
+			li {
+				display: inline-block;
+				padding: 0 11px;
+
+				a {
+					display: block;
+					padding: 3px 0px;
+					color: #000;
+					transition: color 160ms;
+
+					&:hover {
+						color: #3064E2;
+					}
+				}
+				
+				&.active {
+					a {
+						border-color: #E20010;
+					}
+				}
+			}
+		}
+	}
+}
+
+.site-footer {
+	margin: 12px 0;
+
+	p {
+		font-size: 67%;
+		text-align: center;
+	}
+}

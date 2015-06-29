@@ -1,0 +1,3 @@
+[submodule "vendor/gridle"]
+	path = vendor/gridle
+	url = https://github.com/olivierbossel/gridle.git

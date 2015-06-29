@@ -22,3 +22,5 @@ redcarpet:
     'no_intra_emphasis',
     'strikethrough'
   ]
+sass:
+  sass_dir: /

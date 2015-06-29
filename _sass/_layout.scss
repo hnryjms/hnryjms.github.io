@@ -1,0 +1,73 @@
+/*
+ * _layout.scss
+ *
+ * Copyright (c) 2015 by Hank Brekke. All rights reserved.
+ */
+
+@import "css/fonts";
+@import "vendor/gridle/sass/gridle/gridle";
+
+$font-family: "Montserrat", sans-serif;
+$font-weight: 300;
+$line-height: 150%;
+
+$font-size-base: 16px;
+
+$font-size-h1: 180%;
+$font-weight-h1: 400;
+
+@include gridle_setup((
+    context: 12,
+    gutter-width : 0,
+));
+
+@include gridle_register_state(xs, (
+	max-width: 480px
+));
+@include gridle_register_state(sm, (
+	max-width: 768px
+));
+@include gridle_register_state(md, (
+	max-width: 992px
+));
+@include gridle_register_state(lg, (
+	max-width: 1200px
+));
+
+.respond {
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: 0 auto;
+	width: 100%;
+
+	$min: _gridle_get_state_var(md, "max-width")+1px;
+
+	@media (min-width: _gridle_get_state_var(lg, "max-width")) {
+		width: _gridle_get_state_var(lg, "max-width");
+	}
+	@media (min-width: _gridle_get_state_var(md, "max-width")+1px) and
+			(max-width: _gridle_get_state_var(lg, "max-width")) {
+		width: _gridle_get_state_var(md, "max-width");
+	}
+	@media (min-width: _gridle_get_state_var(sm, "max-width")+1px) and
+			(max-width: _gridle_get_state_var(md, "max-width")) {
+		width: _gridle_get_state_var(sm, "max-width");
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size-base;
+	line-height: $line-height;
+}
+
+h1 {
+	font-size: $font-size-h1;
+	font-weight: $font-weight-h1;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}

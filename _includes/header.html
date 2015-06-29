@@ -1,3 +1,23 @@
-<header class="site-header">
-	<h1>Hank Brekke</h1>
-</header>
+<div class="respond">
+	<header class="site-header">
+		<div class="brand">
+			<h1><a href="/">Hank Brekke</a></h1>
+		</div>
+		<div class="navigation">
+			<ul>
+				{% for item in site.pages %}
+				
+				{% capture title_size %}{{ item.title | size | minus:1 }}{% endcapture %}
+				{% unless title_size contains '-' %}
+				{% if page.url == item.url %}
+					<li class="active"><a href="{{item.url}}">{{item.title}}</a></li>
+				{% else %}
+					<li><a href="{{item.url}}">{{item.title}}</a></li>
+				{% endif %}
+				{% endunless %}
+
+				{% endfor %}
+			</ul>
+		</div>
+	</header>
+</div>
