@@ -13,10 +13,21 @@
 @import "_sass/layout";
 @import "_sass/syntax-highlighting";
 
-.site-header {
-	@include gridle_container();
+$section-separator: 1px solid #EEE;
+$section-spacing: 24px;
 
-	padding: 22px 0;
+.site-header {
+	$link-color: #EB461D;
+
+	padding: $section-spacing 0 0 0;
+
+	.respond {
+		@include gridle_container();
+
+		border-bottom: $section-separator;
+		padding-bottom: $section-spacing;
+		margin-bottom: $section-spacing;
+	}
 
 	.brand {
 		@include gridle(4);
@@ -29,13 +40,19 @@
 		h1 {
 			a {
 				border: none;
-				color: #000;
+				color: $font-color;
 				transition: color 160ms;
 
 				&:hover {
-					color: #3064E2;
+					color: $link-color;
 				}
 			}
+
+			// &.active {
+			// 	a {
+			// 		color: $link-color;
+			// 	}
+			// }
 		}
 	}
 	.navigation {
@@ -55,17 +72,17 @@
 				a {
 					display: block;
 					padding: 3px 0px;
-					color: #000;
+					color: $font-color;
 					transition: color 160ms;
 
 					&:hover {
-						color: #3064E2;
+						color: $link-color;
 					}
 				}
 				
 				&.active {
 					a {
-						border-color: #E20010;
+						border-color: $link-color;
 					}
 				}
 			}
@@ -75,6 +92,12 @@
 
 .site-footer {
 	margin: 12px 0;
+
+	.respond {
+		border-top: $section-separator;
+		padding-top: $section-spacing;
+		margin-top: $section-spacing;
+	}
 
 	p {
 		font-size: 67%;

@@ -9,12 +9,13 @@
 
 $font-family: "Montserrat", sans-serif;
 $font-weight: 300;
-$line-height: 150%;
+$line-height: 170%;
 
 $font-size-base: 16px;
 
 $font-size-h1: 180%;
 $font-weight-h1: 400;
+$font-color: #666;
 
 @include gridle_setup((
     context: 12,
@@ -55,16 +56,49 @@ $font-weight-h1: 400;
 	}
 }
 
+.respond-narrow {
+	max-width: (_gridle_get_state_var(md, "max-width") + _gridle_get_state_var(sm, "max-width")) / 2;
+	margin: 0 auto;
+}
+
+* {
+	-webkit-text-size-adjust: 100%;
+}
+
 h1, h2, h3, h4, h5, h6, p, li {
 	font-family: $font-family;
 	font-weight: $font-weight;
 	font-size: $font-size-base;
 	line-height: $line-height;
+	color: $font-color;
 }
 
 h1 {
 	font-size: $font-size-h1;
 	font-weight: $font-weight-h1;
+}
+
+p {
+	margin: 0 0 18px;
+}
+
+pre {
+	margin: 0 0 18px;
+	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+	line-height: 22px;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	background-color: #f7f7f7;
+	padding: 20px;
+}
+
+code {
+	background-color: #f7f7f7;
+	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+	padding: 4px;
+	font-size: 90%;
 }
 
 a {

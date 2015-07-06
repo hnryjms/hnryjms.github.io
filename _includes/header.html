@@ -1,7 +1,15 @@
-<div class="respond">
-	<header class="site-header">
+<header class="site-header">
+	<div class="respond">
 		<div class="brand">
+
+			{% if page.url == "/index.html" %}
+			<h1 class="active"><a href="/">Hank Brekke</a></h1>
+
+			{% else %}
 			<h1><a href="/">Hank Brekke</a></h1>
+			
+			{% endif %}
+
 		</div>
 		<div class="navigation">
 			<ul>
@@ -19,5 +27,5 @@
 				{% endfor %}
 			</ul>
 		</div>
-	</header>
-</div>
+	</div>
+</header>
