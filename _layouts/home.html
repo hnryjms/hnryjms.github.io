@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+
+	<div class="site-introduction">
+		<h1>Hank Brekke</h1>
+		<p class="lead">Developing a Smarter World</p>
+	</div>
+
+	<header class="site-header primary">
+		<div class="respond">
+			
+			{% include navigation.html %}
+
+		</div>
+	</header>
+
+	{{ content }}
+
+	{% include footer.html %}
+</body>
+</html>

@@ -16,6 +16,28 @@
 $section-separator: 1px solid #EEE;
 $section-spacing: 24px;
 
+.site-introduction {
+	padding: 200px 0 120px 0;
+	text-align: center;
+
+	@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+		padding: 70px 0 30px;
+	}
+
+	h1 {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+
+		&.lead {
+			font-size: 110%;
+			font-weight: 200;
+			color: lighten($font-color, 15%)
+		}
+	}
+}
+
 .site-header {
 	padding: $section-spacing 0 0 0;
 
@@ -28,10 +50,10 @@ $section-spacing: 24px;
 	}
 
 	.brand {
-		@include gridle(4);
-		@include gridle(12, sm);
+		@include gridle(5);
+		@include gridle(12, xs);
 
-		@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+		@media (max-width: _gridle_get_state_var(xs, "max-width")) {
 			text-align: center;
 		}
 
@@ -53,11 +75,11 @@ $section-spacing: 24px;
 		}
 	}
 	.navigation {
-		@include gridle(8);
-		@include gridle(12, sm);
+		@include gridle(7);
+		@include gridle(12, xs);
 
 		text-align: right;
-		@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+		@media (max-width: _gridle_get_state_var(xs, "max-width")) {
 			text-align: center;
 		}
 
@@ -81,10 +103,26 @@ $section-spacing: 24px;
 			}
 		}
 	}
+
+	&.primary {
+
+		.respond {
+			border-top: $section-separator;
+			padding-top: $section-spacing;
+			margin-top: $section-spacing;
+		}
+		.brand {
+			display: none;
+		}
+		.navigation {
+			@include gridle(12);
+			text-align: center;
+		}
+	}
 }
 
 .site-footer {
-	margin: 48px 0;
+	margin: 48px 0 28px;
 
 	.respond {
 		border-top: $section-separator;
