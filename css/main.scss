@@ -32,8 +32,8 @@ $section-spacing: 24px;
 
 		&.lead {
 			font-size: 110%;
-			font-weight: 200;
-			color: lighten($font-color, 15%)
+			font-weight: 300;
+			color: lighten($font-color, 25%)
 		}
 	}
 }
@@ -50,7 +50,7 @@ $section-spacing: 24px;
 	}
 
 	.brand {
-		@include gridle(5);
+		@include gridle(6);
 		@include gridle(12, xs);
 
 		@media (max-width: _gridle_get_state_var(xs, "max-width")) {
@@ -75,7 +75,7 @@ $section-spacing: 24px;
 		}
 	}
 	.navigation {
-		@include gridle(7);
+		@include gridle(6);
 		@include gridle(12, xs);
 
 		text-align: right;

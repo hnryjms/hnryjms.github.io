@@ -9,9 +9,9 @@
 
 $font-family: "Montserrat", sans-serif;
 $font-weight: 300;
-$line-height: 170%;
+$line-height: 180%;
 
-$font-size-base: 16px;
+$font-size-base: 18px;
 $font-color: #666;
 $link-color: $font-color;
 $link-color-hover: #EB461D;
@@ -69,7 +69,7 @@ $background-light: lighten($font-color, 56%);
 }
 
 .respond-narrow {
-	max-width: (_gridle_get_state_var(md, "max-width") + _gridle_get_state_var(sm, "max-width")) / 2;
+	max-width: (_gridle_get_state_var(md, "max-width") + _gridle_get_state_var(sm, "max-width")) / 2.5;
 	margin: 0 auto;
 }
 
@@ -95,6 +95,10 @@ time, mark, audio, video {
 	font-size: $font-size-base;
 	line-height: $line-height;
 	color: $font-color;
+
+	@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+		font-size: $font-size-base - 2px;
+	}
 }
 
 h1 {
