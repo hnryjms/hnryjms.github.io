@@ -17,8 +17,6 @@ $section-separator: 1px solid #EEE;
 $section-spacing: 24px;
 
 .site-header {
-	$link-color: #EB461D;
-
 	padding: $section-spacing 0 0 0;
 
 	.respond {
@@ -38,14 +36,13 @@ $section-spacing: 24px;
 		}
 
 		h1 {
-			a {
-				border: none;
-				color: $font-color;
-				transition: color 160ms;
+			margin: 0;
 
-				&:hover {
-					color: $link-color;
-				}
+			a {
+				font-weight: inherit;
+				font-size: inherit;
+
+				border: none;
 			}
 
 			// &.active {
@@ -65,6 +62,8 @@ $section-spacing: 24px;
 		}
 
 		ul {
+			margin: 0;
+
 			li {
 				display: inline-block;
 				padding: 0 11px;
@@ -72,17 +71,11 @@ $section-spacing: 24px;
 				a {
 					display: block;
 					padding: 3px 0px;
-					color: $font-color;
-					transition: color 160ms;
-
-					&:hover {
-						color: $link-color;
-					}
 				}
 				
 				&.active {
 					a {
-						border-color: $link-color;
+						border-color: $link-color-hover;
 					}
 				}
 			}
@@ -91,7 +84,7 @@ $section-spacing: 24px;
 }
 
 .site-footer {
-	margin: 12px 0;
+	margin: 48px 0;
 
 	.respond {
 		border-top: $section-separator;
