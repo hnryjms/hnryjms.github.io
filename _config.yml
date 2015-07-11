@@ -23,4 +23,4 @@ redcarpet:
     'strikethrough'
   ]
 sass:
-  sass_dir: /
+  sass_dir: /css

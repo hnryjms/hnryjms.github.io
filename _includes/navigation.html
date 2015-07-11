@@ -1,6 +1,7 @@
 <div class="navigation">
 	<ul>
-		{% for item in site.pages %}
+		{% assign pages = site.pages | sort:"weight"  %}
+		{% for item in pages %}
 		
 		{% capture title_size %}{{ item.title | size | minus:1 }}{% endcapture %}
 		{% unless title_size contains '-' %}
