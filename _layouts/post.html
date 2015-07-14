@@ -24,11 +24,22 @@ layout: default
 			</div>
 			{% else %}
 			<div class="post-next">
-				<h5>Start Over</h5>
-				{% assign array = site.posts | reverse %}
-				{% for post in array limit:1 %}
-				<a href="{{post.url}}">{{post.title}}</a>
-				{% endfor %}
+				<h5>Read More</h5>
+				<ul class="post-list">
+
+					{% for post in site.posts offset:1 limit:2 %}
+
+					<li>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					</li>
+
+					{% endfor %}
+
+					<li>
+						<a class="post-link" href="/#articles">See All Articles</a>
+					</li>
+
+				</ul>
 			</div>
 			{% endif %}
 		</div>

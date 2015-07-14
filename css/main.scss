@@ -129,15 +129,19 @@ $section-spacing: 24px;
 	}
 }
 
+.post-list {
+	margin: 0;
+	list-style-type: none;
+
+	li {
+		margin: 2px 0;
+	}
+}
+
 .site-articles {
 	.post-list {
 		margin: 38px 0 0;
-		list-style-type: none;
 		text-align: center;
-
-		li {
-			margin: 2px 0;
-		}
 	}
 }
 
