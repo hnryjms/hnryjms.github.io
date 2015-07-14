@@ -1,8 +1,36 @@
 ---
 layout: default
 ---
-<div class="respond">
-	<div class="respond-narrow">
-		{{ content }}
+<article class="site-post">
+	<div class="respond">
+		<div class="respond-narrow">
+			<div class="post-meta">
+				<h5>{{ page.date | date: '%B %d, %Y' }},</h5>
+				<h2>{{ page.title }}</h2>
+			</div>
+			<div class="post-body">
+				{{ content }}
+			</div>
+			{% if page.action %}
+			<div class="post-action">
+				<a href="{{ page.action_url }}" class="action">{{ page.action | escape }}</a>
+			</div>
+			{% endif %}
+
+			{% if page.next %}
+			<div class="post-next">
+				<h5>Up Next</h5>
+				<a href="{{page.next.url}}">{{page.next.title}}</a>
+			</div>
+			{% else %}
+			<div class="post-next">
+				<h5>Start Over</h5>
+				{% assign array = site.posts | reverse %}
+				{% for post in array limit:1 %}
+				<a href="{{post.url}}">{{post.title}}</a>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
 	</div>
-</div>
+</article>

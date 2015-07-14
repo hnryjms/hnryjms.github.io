@@ -18,11 +18,11 @@ $link-color-hover: #EB461D;
 
 $font-size-h1: 180%;
 $font-weight-h1: 400;
-$font-size-h2: ($font-size-h1 - 13%);
+$font-size-h2: ($font-size-h1 - 23%);
 $font-weight-h2: 400;
-$font-size-h3: ($font-size-h2 - 13%);
+$font-size-h3: ($font-size-h2 - 23%);
 $font-weight-h3: 400;
-$font-size-h4: ($font-size-h3 - 13%);
+$font-size-h4: ($font-size-h3 - 23%);
 $font-weight-h4: 400;
 $font-size-h5: ($font-size-h4 - 13%);
 $font-weight-h5: 400;
@@ -187,12 +187,17 @@ pre {
 	margin: 0 0 18px;
 	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 	line-height: 22px;
-	font-size: 14px;
+	font-size: 13px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	background-color: $background-light;
 	padding: 20px;
+	overflow-x: auto;
+
+	code {
+		padding: 0;
+	}
 }
 
 code, kbd, samp, tt {
@@ -225,7 +230,8 @@ i {
 }
 
 small {
-	font-size: 90%;
+	font-size: 80%;
+	line-height: 12px;
 }
 
 ins {
@@ -291,6 +297,9 @@ table {
 hr {
 	border: 0;
 	border-bottom: 1px solid lighten($font-color, 40%);
+}
+img {
+	max-width: 100%;
 }
 
 .text-left {
