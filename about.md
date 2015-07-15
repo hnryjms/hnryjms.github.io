@@ -5,8 +5,22 @@ permalink: /about/
 weight: 2
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+**I build inspiring products across a range of platforms to help others change
+the world through technology.** I'm a [Code42][code42] employee and
+Minneapolis resident, and have over 8 years of experience working with software.
+I've used with technologies like iOS and OS X, Windows and `C#` servers, Web and
+Javascript (including `io.js` and `node`), and many more.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I work with a team of software developers at [Code42][code42] to help build the
+most trusted enterprise data security software system leveraging powerful tools
+like native cross-platform apps, and a rock-solid server. Much of my personal
+work is available as open source projects, like [Expressive][expressive] and
+[Builder][builder]. I've also led several skill-based volunteer projects for
+local non-profits and small businesses, and built public and in-house apps to
+solve big problems.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+{% include social.html %}
+
+[code42]: https://code42.com/
+[expressive]: https://github.com/hnryjms/Expressive/
+[builder]: https://github.com/hnryjms/Builder/

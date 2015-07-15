@@ -3,12 +3,12 @@ layout: post
 title:  "Codeblocks for WordPress"
 date:   2014-05-04
 action: "View & Download on GitHub"
-action_url: https://github.com/z43studio/Codeblocks
+action_url: https://github.com/hnryjms/Codeblocks
 ---
 Wordpress includes an amazing visual editor for writing posts, but writing
 articles that include lines of code is frustrating with Wordpress's editors,
 especially for using code highlighting features on your website. **Codeblocks**
-([Github](https://github.com/z43studio/Codeblocks),
+([Github](https://github.com/hnryjms/Codeblocks),
 [Wordpress Plugin Directory](https://wordpress.org/plugins/codeblocks/)) is the
 solution to clean technical-related blog articles using Wordpress. Codeblocks
 separates your code from the built-in content editors of Wordpress, and puts
@@ -71,7 +71,7 @@ to the Codeblocks hook in your `functions.php` file.
 The `codeblocks/rainbow_theme` hook is the main hook for changing the style of
 code on your website. Return the URL of the stylesheet and you'll be good to go.
 But there's also a few other options for supporting Codeblocks in your theme as
-well→if your return `null`, Codeblocks will completely disable code
+well&mdash;if you return `null`, Codeblocks will completely disable code
 highlighting throughout your theme, even if the publisher chose a language for
 code highlighting. You can also return `true` for keeping Codeblocks
 highlighting enabled, but not adding any actual stylesheet file—this option
