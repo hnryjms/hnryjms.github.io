@@ -2,6 +2,10 @@
 layout: post
 title:  "Using Passport.js and Mongoose for Local User Authentication"
 date:   2014-04-09
+summary: "Building an authentication system in Node.js can be challenging,
+especially for integrating OAuth2.0 and authenticated API-based endpoints. In
+this guide, you'll see the fastest and easiest way to integrate Mongoose and
+Passport.js for local user authentication."
 ---
 Building an authentication system in Node.js can be challenging, especially for
 integrating OAuth2.0 and authenticated API-based endpoints. Passport.js is great

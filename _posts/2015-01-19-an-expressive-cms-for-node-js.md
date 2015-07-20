@@ -4,6 +4,9 @@ title:  "An Expressive CMS for Node.js"
 date:   2015-01-19
 action: "Available on GitHub"
 action_url: https://github.com/hnryjms/Expressive
+summary: "Expressive is a new kind of web CMS, built with Node.js and Express.
+It's an ultra-clean and modern, simple and extendable publishing app for blogs,
+websites, portfolios and many other kinds of digital content."
 ---
 **Expressive** is a new kind of web CMS, built with Node.js and Express. It's
 an ultra-clean and modern, simple and extendable publishing app for blogs,

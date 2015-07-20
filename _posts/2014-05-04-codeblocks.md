@@ -4,6 +4,9 @@ title:  "Codeblocks for WordPress"
 date:   2014-05-04
 action: "View & Download on GitHub"
 action_url: https://github.com/hnryjms/Codeblocks
+summary: "Wordpress includes an amazing visual editor for writing posts, but
+writing articles that include lines of code is frustrating with Wordpress's
+editors, especially for using code highlighting features on your website."
 ---
 Wordpress includes an amazing visual editor for writing posts, but writing
 articles that include lines of code is frustrating with Wordpress's editors,

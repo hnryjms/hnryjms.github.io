@@ -2,6 +2,10 @@
 layout: post
 title:  "Teaching a Connected Classroom"
 date:   2014-03-19
+summary: "The students entering schools are coming from a new generation—they are
+students where digital technology has always been common everywhere you look. These
+students have grown up surrounded by technology, and they've never lived without
+being connected to the internet."
 ---
 The students entering schools are coming from a new generation—they are students
 where digital technology has always been common everywhere you look. These

@@ -2,6 +2,10 @@
 layout: post
 title:  "Demystifying iOS 8 Storage Providers"
 date:   2015-04-08
+summary: "With iOS 8, Apple introduced App Extensions as a core
+feature of the new software. The Document Provider and File Provider
+extensions together allow file storage & access while keeping iOS and
+the iOS filesystem tightly locked."
 ---
 With iOS 8, Apple introduced App Extensions as a core feature of the new
 software. Along with custom keyboards, photo filters and a few other extensions,
