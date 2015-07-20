@@ -139,8 +139,22 @@ $section-spacing: 24px;
 }
 
 .site-articles {
+	.list-title {
+		margin: 38px 0 6px;
+		text-align: center;
+
+		h3 {
+			display: inline-block;
+			margin: 0 0 6px;
+			padding: 0 10px 3px 10px;
+			text-transform: uppercase;
+			color: lighten($font-color, 20%);
+			font-size: 90%;
+			border-bottom: $section-separator;
+		}
+	}
 	.post-list {
-		margin: 38px 0 0;
+		margin: 0;
 		text-align: center;
 	}
 }
