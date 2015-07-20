@@ -96,7 +96,7 @@ time, mark, audio, video {
 	line-height: $line-height;
 	color: $font-color;
 
-	@media (max-width: _gridle_get_state_var(sm, "max-width")) {
+	@media (max-width: _gridle_get_state_var(xs, "max-width")) {
 		font-size: $font-size-base - 2px;
 	}
 }
