@@ -2,9 +2,9 @@
 title: Hank Brekke
 email: brekkehj@z43studio.com
 description: >
-  Developing a smarter world.
-
-  A showcase of work by Hank Brekke, software developer at Code42.
+  Hank Brekke is Developing a smarter world.
+  I build inspiring products across a range of platforms to help others
+  change the world through technology.
 baseurl: ""
 url: "https://hnryjms.github.io"
 permalink: /:year/:month/:title/
@@ -24,3 +24,17 @@ redcarpet:
   ]
 sass:
   sass_dir: /css
+
+# Page defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      twitter: "@hnryjms"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      og_type: "article"

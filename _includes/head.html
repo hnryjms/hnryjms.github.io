@@ -4,8 +4,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title and page.title != "Home" %}{{ page.title }} | Hank Brekke{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    {% if page.app_id %}
+    <!-- App Showcase SEO -->
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="{{ page.app_name }}">
+    <meta name="twitter:app:name:ipad" content="{{ page.app_name }}">
+    <meta name="al:ios:app_name" content="{{ page.app_name }}" />
+    <meta name="twitter:app:id:iphone" content="{{ page.app_id }}">
+    <meta name="twitter:app:id:ipad" content="{{ page.app_id }}">
+    <meta name="al:ios:app_store_id" content="{{ page.app_id }}" />
+    {% if page.app_deeplink %}
+    <!-- App Deeplinking -->
+    <meta name="twitter:app:url:iphone" content="{{ page.app_deeplink }}">
+    <meta name="twitter:app:url:ipad" content="{{ page.app_deeplink }}">
+    <meta name="al:ios:url" content="{{ page.app_deeplink }}" />
+    <meta name="apple-itunes-app" content="app-id={{ page.app_id }}, app-argument={{ page.app_deeplink }}">
+    {% else %}
+    <meta name="apple-itunes-app" content="app-id={{ page.app_id }}">
+    {% endif %}
+
+    {% else %}
+    <!-- Article SEO -->
+    <meta name="twitter:card" content="summary" />
+    {% endif %}
+
+    <meta name="twitter:site" content="{{ page.twitter }}" />
+    <meta name="og:site_name" content="{{ site.title }}" />
+
+    {% if page.og_type %}
+    <meta name="og:type" content="{{ page.og_type }}" />
+    {% endif %}
+
+    <meta name="twitter:title" content="{% if page.title and page.title != "Home" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:title" content="{% if page.title and page.title != "Home" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:url" content="{{ page.url | prepend: site.baseurl }}" />
+    {% if page.summary %}
+    <meta name="twitter:description" content="{{ page.summary }}" />
+    <meta name="description" content="{{ page.summary }}">
+    <meta name="og:description" content="{{ page.summary }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.description }}" />
+    <meta name="description" content="{{ site.description }}">
+    <meta name="og:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image }}" />
+    <meta name="og:image" content="{{ page.image }}" />
+    {% endif %}	
 </head>
