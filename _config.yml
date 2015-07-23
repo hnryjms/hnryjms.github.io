@@ -11,6 +11,11 @@ permalink: /:year/:month/:title/
 twitter_username: hnryjms
 github_username:  hnryjms
 timezone: America/Chicago
+gems:
+  - jekyll-sitemap
+exclude: [
+    'vendor'
+  ]
 
 # Build settings
 highlighter: pygments
