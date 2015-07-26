@@ -2,9 +2,8 @@
 	<ul>
 		{% assign pages = site.pages | sort:"weight"  %}
 		{% for item in pages %}
-		
 		{% capture title_size %}{{ item.title | size | minus:1 }}{% endcapture %}
-		{% unless title_size contains '-' %}
+		{% unless title_size contains '-' or item.weight < 0 %}
 		{% if page.url == item.url %}
 			<li class="active"><a href="{{item.url}}">{{item.title}}</a></li>
 		{% else %}

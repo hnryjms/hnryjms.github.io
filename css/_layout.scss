@@ -1,7 +1,5 @@
 /*
  * _layout.scss
- *
- * Copyright (c) 2015 by Hank Brekke. All rights reserved.
  */
 
 @import "fonts";
@@ -77,19 +75,7 @@ $background-light: lighten($font-color, 56%);
 	-webkit-text-size-adjust: 100%;
 }
 
-html, body, div,
-h1, h2, h3, h4, h5, h6, p, blockquote,
-abbr, acronym, address, big, cite,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body {
 	font-family: $font-family;
 	font-weight: $font-weight;
 	font-size: $font-size-base;

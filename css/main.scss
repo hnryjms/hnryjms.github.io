@@ -3,8 +3,6 @@
 ---
 /*
  * main.scss
- *
- * Copyright (c) 2015 by Hank Brekke. All rights reserved.
  */
 
 @charset "utf-8";
@@ -57,7 +55,7 @@ $section-spacing: 24px;
 	}
 
 	.brand {
-		@include gridle(6);
+		@include gridle(5);
 		@include gridle(12, xs);
 
 		@media (max-width: _gridle_get_state_var(xs, "max-width")) {
@@ -67,6 +65,10 @@ $section-spacing: 24px;
 		h1 {
 			margin: 0;
 			font-size: 150%;
+
+			@media (max-width: _gridle_get_state_var(xs, "max-width")) {
+				margin: 0 0 12px 0;
+			}
 
 			a {
 				font-weight: inherit;
@@ -83,7 +85,7 @@ $section-spacing: 24px;
 		}
 	}
 	.navigation {
-		@include gridle(6);
+		@include gridle(7);
 		@include gridle(12, xs);
 
 		text-align: right;
@@ -102,7 +104,7 @@ $section-spacing: 24px;
 					display: block;
 					padding: 3px 0px;
 				}
-				
+
 				&.active {
 					a {
 						border-color: $link-color-hover;
@@ -163,6 +165,120 @@ $section-spacing: 24px;
 	.social {
 		margin: 60px 0 50px;
 	}
+
+	 .project {
+	    padding: 43px 0;
+
+	    @mixin project_vibrant($background-color, $text-color) {
+	        background-color: $background-color;
+	        
+	        $large-text-color: mix($background-color, $text-color, 5%);
+	        $medium-text-color: mix($background-color, $text-color, 15%);
+	        $small-text-color: mix($background-color, $text-color, 35%);
+
+	        color: $medium-text-color;
+	        a {
+	            color: $large-text-color;
+	            &:hover {
+	                color: $text-color;
+	            }
+	        }
+	        p {
+	            color: $small-text-color;
+	        }
+	    }
+
+	    @import 'projects';
+
+	    .project-title {
+	        text-align: center;
+
+	        h2 {
+	            margin: 0 0 35px 0;
+	        }
+	        a {
+	            display: block;
+	            border: 0;
+
+	            &:after {
+	                padding-left: 6px;
+	                content: "\2192";
+	                transition: padding-left 100ms;
+	            }
+	            &:hover {
+	                &:after {
+	                    padding-left: 14px;
+	                }
+	            }
+	        }
+	    }
+	    .project-table {
+	        @include gridle_container();
+	        @include gridle_vertical_align();
+
+	        .project-logo {
+	            @include gridle(3);
+	            @include gridle(4, md);
+	            @include gridle(12, sm);
+
+	            padding: 0 60px 30px 60px;
+	            
+	            svg, img {
+	                display: block;
+	                max-width: 130px;
+	                text-align: center;
+	                margin: 0 auto;
+	            }
+	        }
+	        .project-features {
+	            @include gridle(9);
+	            @include gridle(8, md);
+	            @include gridle(12, sm);
+
+	            @include gridle_parent();
+
+	            @media (min-width:_gridle_get_state_var(md, "max-width")+1) {
+	                & > *:nth-child(3n+1) {
+	                    clear: left;
+	                }
+	            }
+	            @media (min-width:_gridle_get_state_var(sm, "max-width")+1) and (max-width: _gridle_get_state_var(md, "max-width")) {
+	                & > *:nth-child(2n+1) {
+	                    clear: left;
+	                }
+	            }
+	            font-size: 90%;
+
+	            .project-feature {
+	                @include gridle(4);
+	                @include gridle(6, md);
+	                @include gridle(12, sm);
+	                padding: 15px 8px;
+
+	                h4 {
+	                    margin: 0 0 6px 0;
+	                    line-height: 1.45;
+
+	                    // Gridle Vertical Center requires explicit font size.
+	                    font-size: 18px;
+	                    @media (max-width: _gridle_get_state_var(xs, "max-width")) {
+	                        font-size: 16px;
+	                    }
+	                }
+	                p {
+	                    margin-bottom: 6px;
+	                    line-height: 1.45;
+
+	                    // Gridle Vertical Center requires explicit font size.
+	                    font-size: 16px;
+	                    @media (max-width: _gridle_get_state_var(xs, "max-width")) {
+	                        font-size: 14px;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	}
 }
 
 .site-post {
@@ -210,6 +326,8 @@ $section-spacing: 24px;
 		}
 	}
 }
+
+
 
 .social {
 	text-align: center;

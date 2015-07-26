@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-weight: 2
+weight: 3
 ---
 
 **I build inspiring products across a range of platforms to help others change
