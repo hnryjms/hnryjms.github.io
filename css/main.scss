@@ -172,7 +172,7 @@ $section-spacing: 24px;
 	    @mixin project_vibrant($background-color, $text-color) {
 	        background-color: $background-color;
 	        
-	        $large-text-color: mix($background-color, $text-color, 5%);
+	        $large-text-color: mix($background-color, $text-color, 12%);
 	        $medium-text-color: mix($background-color, $text-color, 15%);
 	        $small-text-color: mix($background-color, $text-color, 35%);
 
@@ -185,16 +185,42 @@ $section-spacing: 24px;
 	        }
 	        p {
 	            color: $small-text-color;
+
+	            a {
+	            	color: mix($small-text-color, $medium-text-color, 50%);
+	            }
+	        }
+	        code {
+	        	background-color: lighten($background-color, 8%);
+	        	color: $medium-text-color;
+	        }
+
+	        .project-footer {
+	        	a {
+	        		color: $medium-text-color;
+
+	        		&:hover {
+	        			color: $text-color;
+	        		}
+	        	}
 	        }
 	    }
 
 	    @import 'projects';
 
+	    p {
+	    	display: block;
+	    	max-width: 720px;
+	    	margin: 0 auto 6px auto;
+	    	text-align: center;
+
+	    }
+
 	    .project-title {
 	        text-align: center;
 
 	        h2 {
-	            margin: 0 0 35px 0;
+	            margin: 0 0 28px 0;
 	        }
 	        a {
 	            display: block;
@@ -212,6 +238,37 @@ $section-spacing: 24px;
 	            }
 	        }
 	    }
+	    .project-features-wide {
+	    	@include gridle_container();
+
+	    	@media (min-width:_gridle_get_state_var(md, "max-width")+1) {
+	    	    & > *:nth-child(4n+1) {
+	    	        clear: left;
+	    	    }
+	    	}
+	    	@media (min-width:_gridle_get_state_var(sm, "max-width")+1) and (max-width: _gridle_get_state_var(md, "max-width")) {
+	    	    & > *:nth-child(2n+1) {
+	    	        clear: left;
+	    	    }
+	    	}
+
+	    	.project-feature {
+	    	    @include gridle(3);
+	    	    @include gridle(6, md);
+	    	    @include gridle(12, xs);
+	    	    padding: 15px 8px;
+
+	    	    h4 {
+	    	        margin: 0 0 6px 0;
+	    	        line-height: 1.45;
+	    	    }
+	    	    p {
+	    	    	text-align: left;
+	    	        line-height: 1.45;
+	    	    }
+	    	}
+
+	    }
 	    .project-table {
 	        @include gridle_container();
 	        @include gridle_vertical_align();
@@ -219,9 +276,9 @@ $section-spacing: 24px;
 	        .project-logo {
 	            @include gridle(3);
 	            @include gridle(4, md);
-	            @include gridle(12, sm);
+	            @include gridle(12, xs);
 
-	            padding: 0 60px 30px 60px;
+	            padding: 0 35px 30px 35px;
 	            
 	            svg, img {
 	                display: block;
@@ -229,11 +286,21 @@ $section-spacing: 24px;
 	                text-align: center;
 	                margin: 0 auto;
 	            }
+
+	            @media (min-width:_gridle_get_state_var(xs, "max-width")+1) and (max-width: _gridle_get_state_var(sm, "max-width")) {
+	            	// For this range, the box is usually very tall, so we shouldn' vertically center the logo.
+	                vertical-align: top;
+	                margin-top: 29px;
+	                
+	                svg, img {
+	                	max-width: 90px;
+	                }
+	            }
 	        }
 	        .project-features {
 	            @include gridle(9);
 	            @include gridle(8, md);
-	            @include gridle(12, sm);
+	            @include gridle(12, xs);
 
 	            @include gridle_parent();
 
@@ -266,7 +333,7 @@ $section-spacing: 24px;
 	                    }
 	                }
 	                p {
-	                    margin-bottom: 6px;
+	                	text-align: left;
 	                    line-height: 1.45;
 
 	                    // Gridle Vertical Center requires explicit font size.
@@ -277,6 +344,23 @@ $section-spacing: 24px;
 	                }
 	            }
 	        }
+	    }
+	    .project-footer {
+	    	@extend .respond;
+	    	margin-top: 12px;
+
+	    	a {
+	    		display: block;
+	    		text-align: right;
+	    		font-size: 80%;
+	    		border: none;
+
+	    		&:after {
+	    		    padding-left: 6px;
+	    		    content: "\2192";
+	    		    transition: padding-left 100ms;
+	    		}
+	    	}
 	    }
 	}
 }
