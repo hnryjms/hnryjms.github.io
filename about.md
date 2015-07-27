@@ -3,6 +3,9 @@ layout: page
 title: About
 permalink: /about/
 weight: 3
+summary: "I build inspiring products across a range of platforms to help others
+change the world through technology. I'm a Code42 employee and Minneapolis
+resident, and have over 8 years of experience working with software."
 ---
 
 **I build inspiring products across a range of platforms to help others change
