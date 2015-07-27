@@ -41,8 +41,8 @@
     <meta name="og:type" content="{{ page.og_type }}" />
     {% endif %}
 
-    <meta name="twitter:title" content="{% if page.title and page.title != "Home" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="og:title" content="{% if page.title and page.title != "Home" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:title" content="{% if page.title and page.url != "/" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:title" content="{% if page.title and page.url != "/" %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     {% if page.summary %}
     <meta name="twitter:description" content="{{ page.summary }}" />
