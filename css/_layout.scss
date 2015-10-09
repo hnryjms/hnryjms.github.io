@@ -81,21 +81,6 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height;
 	color: $font-color;
-	
-	/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
 
 	@media (max-width: _gridle_get_state_var(xs, "max-width")) {
 		font-size: $font-size-base - 2px;
@@ -195,17 +180,6 @@ pre {
 	background-color: $background-light;
 	padding: 20px;
 	overflow-x: auto;
-	
-	/* Reverts 428dab22ea76386f440e08b0e0728ad90348dd64 to `body` */
-	overflow-wrap: normal;
-	word-wrap: normal;
-	-ms-word-break: break-all;
-	word-break: normal;
-	-ms-hyphens: none;
-	-moz-hyphens: none;
-	-webkit-hyphens: none;
-	hyphens: none;
-	
 	-webkit-overflow-scrolling: touch;
 
 	code {
@@ -276,6 +250,21 @@ a {
 	border-bottom: 1px solid;
 	color: $link-color;
 	transition: color 160ms;
+	
+	/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 
 	&:hover {
 		color: $link-color-hover;
