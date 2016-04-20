@@ -20,7 +20,7 @@ them in their own individual code editors, accessible in your post using
 highlighting for both editing the post, and for displaying the code on your
 website.
 
-[![Codeblocks Admin](https://z43studio.com/wp-content/uploads/2014/05/codeblocks-1024x586.png)](https://z43studio.com/wp-content/uploads/2014/05/codeblocks.png)
+[![Codeblocks Admin]({{ site.url }}/assets/codeblocks_adminScreen.png)]({{ site.url }}/assets/codeblocks_adminScreen.png)
 
 Codeblocks is built to use some of Wordpress's most powerful core features,
 including hooks and filters, script queuing, and custom post metadata (using
@@ -86,7 +86,7 @@ add_filter('codeblocks/rainbow_theme', function($oldURL) {
 
 	// COMPLETELY DISABLE CODEBLOCKS
 	// return null;
-	
+
 	// DON'T ADD ANY SEPARATE STYLESHEET RESOURCE
 	// return true;
 
