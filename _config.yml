@@ -19,15 +19,11 @@ exclude: [
   ]
 
 # Build settings
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: [
-    'fenced_code_blocks',
-    'autolink',
-    'no_intra_emphasis',
-    'strikethrough'
-  ]
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 sass:
   sass_dir: /css
 

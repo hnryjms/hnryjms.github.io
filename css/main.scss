@@ -171,7 +171,7 @@ $section-spacing: 24px;
 
 	    @mixin project_vibrant($background-color, $text-color) {
 	        background-color: $background-color;
-	        
+
 	        $large-text-color: mix($background-color, $text-color, 12%);
 	        $medium-text-color: mix($background-color, $text-color, 15%);
 	        $small-text-color: mix($background-color, $text-color, 35%);
@@ -279,7 +279,7 @@ $section-spacing: 24px;
 	            @include gridle(12, xs);
 
 	            padding: 0 35px 30px 35px;
-	            
+
 	            svg, img {
 	                display: block;
 	                max-width: 130px;
@@ -291,7 +291,7 @@ $section-spacing: 24px;
 	            	// For this range, the box is usually very tall, so we shouldn' vertically center the logo.
 	                vertical-align: top;
 	                margin-top: 29px;
-	                
+
 	                svg, img {
 	                	max-width: 90px;
 	                }
@@ -362,6 +362,100 @@ $section-spacing: 24px;
 	    		}
 	    	}
 	    }
+	}
+
+	.skills {
+		$skill-spacing: 12px;
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		border-top: $section-separator;
+		padding-top: $section-spacing;
+		margin-top: $section-spacing;
+		margin-left: -$skill-spacing;
+		margin-right: -$skill-spacing;
+
+		.skill {
+			margin: $skill-spacing;
+
+			.progress {
+				margin: 0 auto 10px auto;
+			}
+			h4 {
+				font-size: 100%;
+				text-align: center;
+			}
+
+			@import "circle";
+
+			@mixin skill_proficiency($amount, $color) {
+				.progress {
+					@include progress_circle($amount, $color);
+				}
+			}
+
+			@import "skills";
+		}
+	}
+
+	.experience {
+		padding: $section-spacing 0;
+
+		.experience-item {
+			$title-size: 115%;
+			$title-color: $font-color;
+			$experience-color: lighten($title-color, 10%);
+
+			border-top: $section-separator;
+			padding: $section-spacing 0;
+
+			&:last-child {
+				border-bottom: $section-separator;
+			}
+
+			h3 {
+				font-size: $title-size;
+				display: inline-block;
+				padding-right: 5px;
+				color: $title-color;
+
+				a {
+					color: $title-color;
+					border: none;
+
+					&:hover {
+						color: darken($title-color, 5%);
+					}
+				}
+			}
+			h4 {
+				font-size: $title-size;
+				display: inline-block;
+				color: lighten($title-color, 30%);
+			}
+			p {
+				margin: 0;
+				color: $experience-color;
+			}
+
+			@mixin experience_accent($text-color) {
+				h3 {
+					color: $text-color;
+
+					a {
+						color: $text-color;
+
+						&:hover {
+							background-color: $text-color;
+							color: #FFF;
+						}
+					}
+				}
+			}
+
+			@import 'experience';
+		}
 	}
 }
 

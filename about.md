@@ -4,26 +4,24 @@ title: About
 permalink: /about/
 weight: 3
 summary: "I build inspiring products across a range of platforms to help others
-change the world through technology. I'm a Code42 employee and Minneapolis
-resident, and have over 8 years of experience working with software."
+change the world through technology. I'm completely self-taught from a young age,
+with multiple years of professional experience building software."
 ---
 
 **I build inspiring products across a range of platforms to help others change
-the world through technology.** I'm a [Code42][code42] employee and
-Minneapolis resident, and have over 8 years of experience working with software.
-I've used with technologies like iOS and OS X, Windows and `C#` servers, Web and
-Javascript (including `io.js` and `node`), and many more.
+the world through technology.** I'm completely self-taught from a young age, and
+have multiple years of professional experience in software development. My first
+experiences in computer science began with
+[MIT Scratch][scratch]{:target="_blank"} and making iterative changes to
+pre-built `CSS` & `HTML` website templates, later evolving into building
+advanced custom web applications. I also began building software for iPhone 3G
+when the iOS SDK's were newly announced, and have continuously refined my
+`Objective-C` and `Swift` skills.
 
-I work with a team of software developers at [Code42][code42] to help build the
-most trusted enterprise data security software system leveraging powerful tools
-like native cross-platform apps, and a rock-solid server. Much of my personal
-work is available as open source projects, like [Expressive][expressive] and
-[Builder][builder]. I've also led several skill-based volunteer projects for
-local non-profits and small businesses, and built public and in-house apps to
-solve big problems.
+{% include skills.html %}
+
+{% include experience.html %}
 
 {% include social.html %}
 
-[code42]: https://code42.com/
-[expressive]: https://github.com/hnryjms/Expressive/
-[builder]: https://github.com/hnryjms/Builder/
+[scratch]: https://scratch.mit.edu

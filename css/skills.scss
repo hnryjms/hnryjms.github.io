@@ -1,0 +1,27 @@
+/*
+ * skills.scss
+ */
+
+&#js {
+	@include skill_proficiency(80%, #77AE65);
+}
+
+&#html {
+	@include skill_proficiency(85%, #005A9D);
+}
+
+&#objc {
+	@include skill_proficiency(85%, #686868);
+}
+
+&#swift {
+	@include skill_proficiency(75%, #EF5138);
+}
+
+&#python {
+	@include skill_proficiency(50%, #3B77A7);
+}
+
+&#java {
+	@include skill_proficiency(30%, #EC1C24);
+}

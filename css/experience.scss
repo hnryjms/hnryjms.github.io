@@ -1,0 +1,16 @@
+/*
+ * experience.scss
+ */
+
+&#code42 {
+    @include experience_accent(#FE5000);
+}
+&#bitcrew {
+	@include experience_accent(#3A9CD9);
+}
+&#tempworks {
+	@include experience_accent(#BA393E);
+}
+&#residentialscience {
+	@include experience_accent(#49BB71);
+}
