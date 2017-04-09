@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# http://stackoverflow.com/a/5143914
+# http://stackoverflow.com/a/5143914 and http://stackoverflow.com/a/3801554
 git update-index -q --refresh
-CHANGED=$(git diff-index --name-only HEAD --)
+CHANGED=$(git diff-index --name-only HEAD --; git ls-files --others --exclude-standard)
 if [ -n "$CHANGED" ]; then
-	git stash --all
+	git stash --include-untracked
 fi
 
 bundle exec jekyll build
