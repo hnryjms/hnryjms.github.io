@@ -3,7 +3,7 @@
  */
 
 &#js {
-	@include skill_proficiency(80%, #77AE65);
+	@include skill_proficiency(85%, #77AE65);
 }
 
 &#html {
@@ -11,17 +11,17 @@
 }
 
 &#objc {
-	@include skill_proficiency(85%, #686868);
+	@include skill_proficiency(77%, #686868);
 }
 
 &#swift {
 	@include skill_proficiency(75%, #EF5138);
 }
 
-&#python {
-	@include skill_proficiency(50%, #3B77A7);
+&#sketch {
+	@include skill_proficiency(60%, #FEB00E);
 }
 
-&#java {
-	@include skill_proficiency(30%, #EC1C24);
+&#python {
+	@include skill_proficiency(50%, #3B77A7);
 }

@@ -16,7 +16,9 @@ experiences in computer science began with
 pre-built `CSS` & `HTML` website templates, later evolving into building
 advanced custom web applications. I also began building software for iPhone 3G
 when the iOS SDK's were newly announced, and have continuously refined my
-`Objective-C` and `Swift` skills.
+`Objective-C` and `Swift` skills. More recently, I've been working with
+[React Native][react-native]{:target="_blank"} and
+[Skech][sketch]{:target="_blank"} to design and build mobile apps.
 
 {% include skills.html %}
 
@@ -25,3 +27,5 @@ when the iOS SDK's were newly announced, and have continuously refined my
 {% include social.html %}
 
 [scratch]: https://scratch.mit.edu
+[react-native]: https://facebook.github.io/react-native
+[sketch]: https://www.sketchapp.com
