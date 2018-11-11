@@ -349,10 +349,11 @@ $section-spacing: 24px;
 	    	@extend .respond;
 	    	margin-top: 12px;
 
+			text-align: right;
+			font-size: 80%;
+
 	    	a {
 	    		display: block;
-	    		text-align: right;
-	    		font-size: 80%;
 	    		border: none;
 
 	    		&:after {
