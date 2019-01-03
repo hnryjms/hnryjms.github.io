@@ -473,6 +473,13 @@ $section-spacing: 24px;
 			line-height: 140%;
 		}
 	}
+	.post-body {
+		&::after {
+			content: ' ';
+			clear: both;
+			display: table;
+		}
+	}
 	.post-action {
 		margin: 95px 0;
 		text-align: center;

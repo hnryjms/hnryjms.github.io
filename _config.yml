@@ -11,7 +11,7 @@ permalink: /:year/:month/:title/
 twitter_username: hnryjms
 github_username:  hnryjms
 timezone: America/Chicago
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 exclude: [
