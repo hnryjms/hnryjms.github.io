@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Custom Camera Overlay View on iPhone X"
-date:   2017-12-18
-summary: ""
+date:   2019-01-02
+summary: "When you build a custom image picker view on iOS, you might find black content below a scaled viewfinder."
 ---
 The [`UIImagePickerController`][pickervc]{:target="_blank"} component on iOS bundles the best native experience for
 capturing photos and videos within the iOS platform. Using frameworks like `AVFoundation` come with a lot of
