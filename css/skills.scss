@@ -7,11 +7,11 @@
 }
 
 &#html {
-	@include skill_proficiency(85%, #005A9D);
+	@include skill_proficiency(75%, #005A9D);
 }
 
 &#react {
-	@include skill_proficiency(78%, #61DAFB);
+	@include skill_proficiency(85%, #61DAFB);
 }
 
 &#sketch {
@@ -19,9 +19,9 @@
 }
 
 &#ios {
-	@include skill_proficiency(76%, #EF5138);
+	@include skill_proficiency(80%, #EF5138);
 }
 
 &#ruby {
-	@include skill_proficiency(50%, #BC311D);
+	@include skill_proficiency(55%, #BC311D);
 }
