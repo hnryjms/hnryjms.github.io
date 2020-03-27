@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Running Selenium Test Suite in AWS CodeBuild"
-summary: "Modern web applications should definitely include at least a few tests. Thanks to docker-selenium and @dtinth
-we're able to launch a pre-configured Google Chrome and record the test run to a MP4 video."
+summary: "Modern web applications should include at least a few tests. Thanks to docker-selenium and @dtinth we're able
+to launch a pre-configured Google Chrome and record the test run to an MP4 video in AWS CodeBuild."
 ---
-Modern web applications should definitely include at least a few tests, and increasingly those tests are
+Modern web applications should include at least a few tests, and increasingly those tests are
 [integration tests][func-test]{:target="_blank"} instead of unit tests. Integration tests (or "system tests" or
 "functional tests") prove that an application works the way *the business needs*, rather than *the way a developer
 designed it* (i.e. unit tests). In a web app, that often means using Selenium to connect into Google Chrome, Firefox,
@@ -13,7 +13,7 @@ machine, and you can have your first test written within a few hours.
 
 But adding your integration tests into your CI environment, which doesn't have a browser or even a window system, like
 x11, is a much larger task. Thanks to [docker-selenium][d-sel]{:target="_blank"} and [@dtinth][dtinth]{:target="_blank"},
-we're able to launch a pre-configured Google Chrome and record the test run to a MP4 video (so we can watch any failures).
+we're able to launch a pre-configured Google Chrome and record the test run to an MP4 video (so we can watch any failures).
 
 Let's dive into a `buildspec.yml` for AWS CodeBuild that lets us run Selenium:
 
@@ -84,7 +84,7 @@ Because we're connecting to the docker host to run a container, we **need to con
 
 ### `phases: build:`
 
-We use `npm run test` to start our test suite, and apply a few environment variables that our testing code will need,
+We use `npm run test` to start our test suite and apply a few environment variables that our testing code will need,
 like which browser to use and where to connect to Selenium. In my code, I'm using `cucumber-js` internally, so I also
 configure a JSON reporter that AWS CodeBuild can parse after the test run.
 
@@ -96,8 +96,8 @@ know it's done, we copy the video file to the build machine.
 
 ### `artifacts:` and `reports:`
 
-This is where we tell AWS CodeBuild to take our results, and store them somewhere within our AWS account. Because I'm
-using `cucumber-js` and AWS CodeBuild has a native `CucumberJson` parser, I'm able to see rich reports in the AWS
+This is where we tell AWS CodeBuild to take our results and store them somewhere within our AWS account. Because I'm
+using `cucumber-js` and AWS CodeBuild includes a native `CucumberJson` parser, I'm able to see rich reports in the AWS
 Management Console. If you're not using Cucumber reporting, you can remove the `reports:` section, or see if your
 tool can output a JUnit or other AWS CodeBuild compatible report.
 
@@ -107,9 +107,9 @@ Since we artifact a video recording, we **need to configure AWS CodeBuild to
 ### Next Steps
 
 There are a few natural next steps that I'm not getting into with this guide. Feel free to make improvements on this
-`codebuild.yml` file for your own project.
+`codebuild.yml` file for your project.
 
-Here's some things you might want to try:
+Here are some things you might want to try:
 
 - Use a build variable for which browser to run, like Chrome and Firefox.
 - Fix the FFmpeg encoding issue for QuickTime on macOS
