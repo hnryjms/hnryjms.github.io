@@ -35,8 +35,8 @@ phases:
   pre_build:
     commands:
       - docker run -d -p 4444:4444 -v /dev/shm:/dev/shm --name selenium selenium/standalone-chrome:latest
-      - docker exec -u 0 selenium /bin/bash -c 'apt-get update && apt-get install -y ffmpeg gpac && rm -rf /var/lib/apt/lists/*'
-      - docker exec -d selenium ffmpeg -video_size 1360x1020 -framerate 15 -f x11grab -i :99.0 /home/seluser/recording.mp4
+      - docker exec -u 0 selenium /bin/bash -c 'apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*'
+      - docker exec -d selenium ffmpeg -video_size 1360x1020 -framerate 15 -f x11grab -i :99.0 -vf format=yuv420p /home/seluser/recording.mp4
   build:
     commands:
       - |
@@ -61,9 +61,8 @@ reports:
       - test-integration/report.json
 ```
 
-<small>Note: The MP4 videos from FFmpeg are currently encoded in a way that doesn't play in QuickTime on macOS. If
-you're an FFmpeg pro, or have time to find a solution from [FFmpeg's doc on h.264][ffmpeg]{:target="_blank"}, let me
-know and I'll update this guide!</small>
+<small>Note: You can find a more advanced approach to using FFmpeg recording in my newer post about
+[Recording a Selenium Test Suite Video with FFmpeg][selvid]. It's pretty cool!</small>
 
 Let's take a closer look at what's going on in this `buildspec.yml` to get our test suite running.
 
@@ -112,7 +111,9 @@ There are a few natural next steps that I'm not getting into with this guide. Fe
 Here are some things you might want to try:
 
 - Use a build variable for which browser to run, like Chrome and Firefox.
-- Fix the FFmpeg encoding issue for QuickTime on macOS
+- Build the FFmpeg-installed docker image ahead of time (*only if you're comfortable rebuilding that image every time
+  a new Google Chrome/docker-selenium image is published).
+- Read my [next guide][selvid]{:target="_blank"} on more advanced FFmpeg integration with Selenium.
 
 Stay tuned for a future guide, where we dive into deploying our application using Terraform in AWS CodeBuild, and then
 tie the whole thing together using an AWS CodePipeline to run all our CI/CD jobs back-to-back upon code changes.
@@ -123,5 +124,5 @@ Twitter—[@hnryjms](https://twitter.com/hnryjms "@hnryjms on Twitter"), or give
 [func-test]: https://wiki.c2.com/?CanFunctionalTestsReplaceUnitTests
 [d-sel]: https://github.com/SeleniumHQ/docker-selenium
 [dtinth]: https://github.com/SeleniumHQ/docker-selenium/issues/148#issuecomment-278024174
-[ffmpeg]: https://trac.ffmpeg.org/wiki/Encode/H.264
+[selvid]: {{ site.url }}/2020/04/record-selenium/
 [aws-priv]: https://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html

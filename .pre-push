@@ -1,15 +1,4 @@
 #!/bin/bash
 
-# http://stackoverflow.com/a/5143914 and http://stackoverflow.com/a/3801554
-git update-index -q --refresh
-CHANGED=$(git diff-index --name-only HEAD --; git ls-files --others --exclude-standard)
-if [ -n "$CHANGED" ]; then
-	git stash --include-untracked
-fi
-
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 aws s3 sync ./_site s3://hnryjms.io
-
-if [ -n "$CHANGED" ]; then
-	git stash pop
-fi
