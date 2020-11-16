@@ -21,16 +21,16 @@ body {
 .respond {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: calc(1em + env(safe-area-inset-left));
-  padding-right: calc(1em + env(safe-area-inset-right));
+  padding-left: calc(1rem + env(safe-area-inset-left));
+  padding-right: calc(1rem + env(safe-area-inset-right));
 }
 
 .respond-narrow {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: calc(1em + env(safe-area-inset-left));
-  padding-right: calc(1em + env(safe-area-inset-right));
+  padding-left: calc(1rem + env(safe-area-inset-left));
+  padding-right: calc(1rem + env(safe-area-inset-right));
 }
 
 @import "site-introduction";
@@ -42,4 +42,5 @@ body {
 @import "experience";
 @import "footer";
 
+@import "projects";
 @import "project-childcare";

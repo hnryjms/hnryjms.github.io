@@ -1,0 +1,53 @@
+.project-list {
+  li {
+    display: block;
+    list-style: none;
+    background-color: #666;
+    padding: 1.3rem 0;
+    line-height: 1.4;
+
+    &.childcare {
+      background-color: #ff3a3a;
+      padding: 3rem 0;
+    }
+    &.jotts { background-color: #0081FF; }
+    &.react { background-color: #9b9b9b; }
+    &.stream-together { background-color: #75c223; }
+    &.codeblocks { background-color: #4F5D95; }
+    &.builder { background-color: #701516; }
+
+    a, p {
+      display: block;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+      color: #fff;
+      padding-right: calc(1rem + env(safe-area-inset-right));
+      padding-left: calc(1rem + env(safe-area-inset-left));
+    }
+
+    a {
+      border: 0;
+      font-weight: 400;
+      font-size: 1.4rem;
+
+      &::after {
+        content: '\2192';
+        margin-left: 0.2rem;
+        transition: margin-left 100ms;
+      }
+      &:hover {
+        color: #fff;
+
+        &::after {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+
+    p {
+      margin-top: 0.8rem;
+    }
+  }
+}
