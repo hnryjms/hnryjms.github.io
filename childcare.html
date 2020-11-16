@@ -1,0 +1,166 @@
+---
+layout: default
+title: Childcare
+permalink: /childcare/
+weight: -1
+summary: "???"
+---
+
+<div class="project" id="childcare">
+    <div class="promo-panel">
+        <div class="respond">
+            <div class="promo-text">
+                <h1>Modern Childcare Software</h1>
+                <p>Run your business faster, securely and powerfully with a new
+                    class of childcare software. Modern Childcare Software can
+                    unify billing, payroll, announcements and marketing.</p>
+            </div>
+            <div class="promo-image">
+                {% assign min = 1 %}
+                {% assign max = 3 %}
+                {% assign diff = max | minus: min %}
+                {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+                {% if randomNumber == 1 %}
+                <img
+                    src="/assets/childcare-promo-browser-1.png"
+                    alt="Software dashboard showing chart of child and employee attendance totals by hour"
+                />
+                {% elsif randomNumber == 2 %}
+                <img
+                    src="/assets/childcare-promo-browser-2.png"
+                    alt="Software dashboard showing table of child names and weekly tuition rates"
+                />
+                {% elsif randomNumber == 3 %}
+                <img
+                    src="/assets/childcare-promo-browser-3.png"
+                    alt="Software dashboard showing Add Payment dialog, with warning for statistically unusual payment"
+                />
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="respond">
+        <div class="features-panel">
+            <div class="feature">
+                <h2>Time & Attendance Software</h2>
+                <p>Parents can check in & out using any computer or tablet you
+                    set up. Add a drop-in rate and automatically charge parents
+                    as they check-in.</p>
+            </div>
+            <div class="feature">
+                <h2>Parent Billing & Invoicing</h2>
+                <p>With Stripe, you can enable ACH or Credit Card autopay for
+                    child tuition. Add manual payments or one-time charges
+                    quickly and accurately.</p>
+            </div>
+            <div class="feature">
+                <h2>Online Parent Accounts</h2>
+                <p>Every parent has an account in your website where they
+                    can view invoices, update autopay or account settings
+                    and read announcements.</p>
+            </div>
+            <div class="feature">
+                <h2>Employee Management</h2>
+                <p>Staff can also check in & out for payroll that syncs
+                    with QuickBooks, Square Payroll and PDF reports.
+                    Classroom ratios are automatically calculated.</p>
+            </div>
+            <div class="feature">
+                <h2>Website & SEO Included</h2>
+                <p>Engage new and existing parents to your business without
+                    paying extra for a stylish website. Share private
+                    photos & announcements in one uniform system.</p>
+            </div>
+            <div class="feature">
+                <h2>Hosted & Managed Server</h2>
+                <p>You’ll never need to worry about losing your parents if
+                    a computer dies. Data is encrypted and accessible in
+                    the cloud from anywhere.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="respond">
+        <div class="demo-panel">
+            <div class="demo-video">
+                <video
+                    controls
+                    controlslist="nofullscreen"
+                    disablePictureInPicture
+                    disableRemotePlayback
+                    playsinline
+                    muted
+                >
+                    <source src="/assets/childcare-demo-webui.mp4" type="video/mp4">
+                    Video tag is not supported in this browser.
+                </video>
+            </div>
+            <div class="demo-playlist">
+                <a class="track active" href="/assets/childcare-demo-webui.mp4">
+                    <h2>Web-based Management</h2>
+                    <p>You don’t need a specific PC to run your business.
+                        Work from your phone or laptop.</p>
+                </a>
+                <a class="track" href="/assets/childcare-demo-stripe.mp4">
+                    <h2>Powered by Stripe Connect</h2>
+                    <p>Stripe creates smart dashboards of your revenue
+                        even if you don’t use autopay.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="respond">
+        <div class="pricing-panel">
+            <div class="pricing-tier">
+                <div>
+                    <h2>Basic</h2>
+                    <ul>
+                        <li>Child Time Tracking</li>
+                        <li>Weekly Tuition</li>
+                        <li>Drop-In Invoicing</li>
+                        <li>Manual Payments</li>
+                        <li>Stripe Dashboards</li>
+                        <li>PDF & XLSX Exports</li>
+                        <li>Email Reminders</li>
+                        <li>Cloud Hosted</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>$10/mo.</h3>
+                    <small>paid annually</small>
+                </div>
+            </div>
+            <div class="pricing-tier premium">
+                <div>
+                    <h2>Premium</h2>
+                    <p>+ All Basic Features</p>
+                    <ul>
+                        <li>Employee Check-In</li>
+                        <li>Sync with Payroll</li>
+                        <li>Website & SEO</li>
+                        <li>Parent Login</li>
+                        <li>ACH/CC Autopay</li>
+                        <li>Announcements</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>$25/mo.</h3>
+                    <small>paid annually</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="respond interest-panel">
+        <form action="/" method="post" id="interest-form">
+            <div class="email-input">
+                <input type="email" autocomplete="username" name="email" placeholder="you@yourcompany.com" />
+                <button type="submit">I'm Interested</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/assets/childcare.js" type="text/javascript"></script>

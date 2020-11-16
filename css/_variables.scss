@@ -1,0 +1,22 @@
+:root {
+  --color-page-bg: #fff;
+  --color-text: #666;
+  --color-code-bg: #f5f5f5;
+  --color-section-separator: #eee;
+  --color-skills-bg: #ddd;
+  --color-panel-shadow: #0002;
+
+  font-size: 18px;
+  -webkit-text-size-adjust: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page-bg: #000;
+    --color-code-bg: #002b36;
+    --color-section-separator: #222;
+    --color-skills-bg: #333;
+    --color-text: #999;
+    --color-panel-shadow: #FFF3;
+  }
+}

@@ -1,47 +1,43 @@
 ---
 layout: default
 ---
-<article class="site-post">
-	<div class="respond">
-		<div class="respond-narrow">
-			<div class="post-meta">
-				<h5>{{ page.date | date: '%B %d, %Y' }},</h5>
-				<h2>{{ page.title }}</h2>
-			</div>
-			<div class="post-body">
-				{{ content }}
-			</div>
-			{% if page.action %}
-			<div class="post-action">
-				<a href="{{ page.action_url }}" class="action">{{ page.action | escape }}</a>
-			</div>
-			{% endif %}
-
-			{% if page.next %}
-			<div class="post-next">
-				<h5>Up Next</h5>
-				<a href="{{page.next.url}}">{{page.next.title}}</a>
-			</div>
-			{% else %}
-			<div class="post-next">
-				<h5>Read More</h5>
-				<ul class="post-list">
-
-					{% for post in site.posts offset:1 limit:2 %}
-
-					<li>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-					</li>
-
-					{% endfor %}
-
-					<li>
-						<a class="post-link" href="/#articles">See All Articles</a>
-					</li>
-
-				</ul>
-			</div>
-			{% endif %}
-		</div>
+<article class="respond-narrow">
+	<div class="post-meta">
+		<h5>{{ page.date | date: '%B %d, %Y' }},</h5>
+		<h2>{{ page.title }}</h2>
 	</div>
+	<div class="post-body">
+		{{ content }}
+	</div>
+	{% if page.action %}
+	<div class="post-action">
+		<a href="{{ page.action_url }}" class="action">{{ page.action | escape }}</a>
+	</div>
+	{% endif %}
+
+	{% if page.next %}
+	<div class="post-next">
+		<h5>Up Next</h5>
+		<a href="{{page.next.url}}">{{page.next.title}}</a>
+	</div>
+	{% else %}
+	<div class="post-next">
+		<h5>Read More</h5>
+		<ul class="post-list">
+
+			{% for post in site.posts offset:1 limit:2 %}
+
+			<li>
+				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			</li>
+
+			{% endfor %}
+
+			<li>
+				<a class="post-link" href="/#articles">See All Articles</a>
+			</li>
+
+		</ul>
+	</div>
+	{% endif %}
 </article>

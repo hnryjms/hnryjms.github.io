@@ -1,18 +1,14 @@
-<header class="site-header {{ takeover_tag }}">
-	<div class="respond">
-		<div class="brand">
+<header class="respond">
+	<div class="brand">
 
-			{% if page.url == "/index.html" %}
-			<h1 class="active"><a href="/">Hank Brekke</a></h1>
+		{% if page.url == "/index.html" %}
+		<h1 class="active"><a href="/">Hank Brekke</a></h1>
+		{% else %}
+		<h1><a href="/">Hank Brekke</a></h1>
 
-			{% else %}
-			<h1><a href="/">Hank Brekke</a></h1>
-			
-			{% endif %}
-
-		</div>
-		
-		{% include navigation.html %}
+		{% endif %}
 
 	</div>
+
+	{% include navigation.html %}
 </header>

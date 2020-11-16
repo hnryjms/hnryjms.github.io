@@ -6,17 +6,15 @@ weight: 1
 redirect_from:
   - /blog/
 ---
-<section class="site-articles">
-	<div class="respond">
-		<ul class="post-list">
-			{% for post in site.posts %}
+<section class="respond site-articles">
+	<ul class="post-list">
+		{% for post in site.posts %}
 
-			<li>
-				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-			</li>
+		<li>
+			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		</li>
 
-			{% endfor %}
+		{% endfor %}
 
-		</ul>
-	</div>
+	</ul>
 </section>

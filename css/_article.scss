@@ -1,0 +1,139 @@
+article {
+  margin: 2rem 0;
+  line-height: 1.7;
+
+  abbr, acronym {
+    border-bottom: 1px dotted var(--color-text);
+    cursor: help;
+  }
+
+  pre {
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  code {
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    background-color: var(--color-code-bg);
+    padding: 0.3em;
+    font-size: 0.8em;
+  }
+
+  ul {
+    padding-left: 2rem;
+    list-style: outside square;
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    padding-left: 2rem;
+    list-style: outside upper-roman;
+    margin-bottom: 1rem;
+  }
+}
+
+.site-articles {
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  li {
+    margin: 0.5rem 0;
+  }
+}
+
+.post-meta {
+  h5 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.post-body {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.post-action {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.post-next {
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--color-section-separator);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  color: var(--color-text);
+  transition: color 160ms;
+  &:hover {
+    color: #EB461D;
+  }
+}
+
+img {
+  max-width: 100%;
+
+  &.image-aside {
+    float: left;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+
+  &.image-aside-right {
+    float: right;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+strong {
+  font-weight: 400;
+}
+
+small {
+  font-size: 0.75rem;
+}

@@ -1,5 +1,6 @@
 _site
 .sass-cache
+.jekyll-cache
 
 # User-specific stuff:
 .idea/**/workspace.xml

@@ -1,0 +1,68 @@
+@mixin progress_circle($percentage, $color) {
+  $bar-color: var(--color-skills-bg);
+  $bar-width: 0.3rem;
+  $element-size: 4rem;
+
+  .progress {
+    position: relative;
+    width: $element-size;
+    height: $element-size;
+    border-radius: 50%;
+    background-color: $bar-color;
+
+    $degree: 360deg * ($percentage / 100%);
+    @if $percentage < 50% {
+      $nextdeg: 90deg + $degree;
+      background-image: linear-gradient(90deg, $bar-color 50%, transparent 50%, transparent),
+      linear-gradient($nextdeg, $color 50%, $bar-color 50%, $bar-color);
+    } @else {
+      background-image: linear-gradient($degree - 270deg, $color 50%, transparent 50%, transparent),
+      linear-gradient(90deg, $bar-color 50%, $color 50%, $color);
+    }
+
+    &::after {
+      content: "";
+      width: $element-size - ($bar-width * 2);
+      height: $element-size - ($bar-width * 2);
+      background-color: var(--color-page-bg);
+      border-radius: 50%;
+      display: block;
+      position: relative;
+      top: $bar-width;
+      left: $bar-width;
+    }
+  }
+}
+
+.skills {
+  $skill-spacing: 12px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-section-separator);
+  padding-top: 24px;
+  margin-top: 24px;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  .skill {
+    margin: 12px;
+
+    .progress {
+      margin: 0 auto 10px auto;
+    }
+
+    h4 {
+      font-size: 100%;
+      text-align: center;
+    }
+
+    &#js { @include progress_circle(85%, #77AE65); }
+    &#html { @include progress_circle(75%, #005A9D); }
+    &#react { @include progress_circle(85%, #61DAFB); }
+    &#sketch { @include progress_circle(65%, #FEB00E); }
+    &#ios { @include progress_circle(80%, #EF5138); }
+    &#ruby { @include progress_circle(55%, #BC311D); }
+  }
+}
