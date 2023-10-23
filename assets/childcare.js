@@ -33,7 +33,7 @@ function handlePlaylistTrackHover(event) {
 
 function handleChildcareInterest(event) {
   const emailInput = document.querySelector('input[name="email"]');
-  Intercom('boot', { email: emailInput.value, });
+  Intercom('update', { anonymous_email: emailInput.value, });
   Intercom('trackEvent', 'childcare-interest');
 
   const success = document.createElement('div');
